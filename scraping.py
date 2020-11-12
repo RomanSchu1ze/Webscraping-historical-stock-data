@@ -93,17 +93,19 @@ def plot_data(df, vars, title):
     plt.ylabel("US-Dollar")
     # Add a legend
     plt.legend()
-    # change label frquency of x-axis to monthly
+    # Update x-axis
     ax = plt.gca()
+    # change label frequency of x-axis to monthly
     ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+    # Format date
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%d-%m-%Y"))
-    # Rotation
+    # Rotate
     plt.gcf().autofmt_xdate()
     # plot data
     plt.show()
 
 
-# Check webscraper using Google historical data
+# Check webscraper using historical Apple data
 aapl = web_scraper("https://finance.yahoo.com/quote/AAPL/history?p=AAPL")
 # clean data
 aapl = clean_data(aapl)
