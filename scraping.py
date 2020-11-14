@@ -59,7 +59,7 @@ def web_scraper(yahoo_url):
 
 # For further adjustments of the dataframe the follwing function might be helpful
 def clean_data(df):
-    # drop row if it contains more than 2 na´s
+    # drop row if it contains more than 3 na´s
     df.dropna(thresh=4, axis=0, inplace=True)
     # Adjust strings for further processing of the data
     for col in df.columns:
