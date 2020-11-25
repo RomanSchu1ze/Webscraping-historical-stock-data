@@ -1,2 +1,2 @@
 # Webscraping-historical-stock-data
-In this short script I am webscraping historical stock data from yahoo finance using python.
+this script covers the webscraping of historical stock data from yahoo finance.
