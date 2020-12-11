@@ -43,7 +43,7 @@ def web_scraper(yahoo_url):
             try:
                 # try to extract the corresponding column value for each row
                 container.append(table_rows[k].find_all("td")[c].text)
-            except:
+            except IndexError:
                 # if there is no value fill with missing
                 container.append(np.nan)
         # after walking the body from top to bottom add values to it´s column key
