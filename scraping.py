@@ -57,7 +57,7 @@ def web_scraper(yahoo_url):
     return(df)
 
 
-# For further adjustments of the dataframe the follwing function might be helpful
+# function for cleaning data 
 def clean_data(df):
     # drop row if it contains more than 3 na´s
     df.dropna(thresh=4, axis=0, inplace=True)
